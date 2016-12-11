@@ -1,0 +1,167 @@
+==============================================================================
+Heroku server URL: http://introsde-assignment3-ar.herokuapp.com/ws/people?wsdl
+==============================================================================
+
+Request #1: readPersonList()
+Print the whole list of people:
+
+=> Result:
+
+	[id]: 1
+	[firstname]: John
+	[lastname]: Brown
+	[birthdate]: 10-10-1980
+
+	[id]: 2
+	[firstname]: Margaret
+	[lastname]: Robinson
+	[birthdate]: 15-09-1982
+
+	[id]: 3
+	[firstname]: Jeremy
+	[lastname]: Allen
+	[birthdate]: 01-01-1971
+
+	[id]: 4
+	[firstname]: Eric
+	[lastname]: Harris
+	[birthdate]: 04-04-1979
+
+	[id]: 5
+	[firstname]: Anna
+	[lastname]: Garcia
+	[birthdate]: 12-12-1985
+
+==============================================================================
+
+Request #2: readPerson(2)
+Print the person with ID 2:
+
+=> Result:
+
+	[id]: 2
+	[firstname]: Margaret
+	[lastname]: Robinson
+	[birthdate]: 15-09-1982
+
+==============================================================================
+
+Request #3: updatePerson(person)
+Update person (ID: 1) with new firstname "FIRSTNAME UPDATED":
+
+=> Result:
+
+	[id]: 1
+	[firstname]: FIRSTNAME UPDATED
+	[lastname]: Brown
+	[birthdate]: 10-10-1980
+
+==============================================================================
+
+Request #4: createPerson(person)
+Create myself (Alan Ramponi - Aug 15th, 1991):
+
+=> Result:
+
+	[id]: 8
+	[firstname]: Alan
+	[lastname]: Ramponi
+	[birthdate]: 15-08-1991
+
+==============================================================================
+
+Request #5: deletePerson(8)
+If successful, print the deleted person (ID: 8):
+
+=> Result:
+
+	[id]: 8
+	[firstname]: Alan
+	[lastname]: Ramponi
+	[birthdate]: 15-08-1991
+
+==============================================================================
+
+Request #6: readPersonHistory(1, "weight")
+Print the "weight" history for the person with ID 1:
+
+=> Result:
+
+	[mid]: 1
+	[value]: 79
+	[valueType]: Int
+	[created]: Sun Nov 15 16:28:15 CET 2015
+
+	[mid]: 5
+	[value]: 78
+	[valueType]: Int
+	[created]: Fri Jan 22 10:18:23 CET 2016
+
+	[mid]: 9
+	[value]: 76
+	[valueType]: Int
+	[created]: Wed Jul 20 11:08:14 CET 2016
+
+	[mid]: 10
+	[value]: 75
+	[valueType]: Int
+	[created]: Fri Nov 18 14:21:58 CET 2016
+
+==============================================================================
+
+Request #7: readMeasureTypes()
+Print the whole list of measures:
+
+=> Result:
+
+	[id]: 1
+	[name]: weight
+
+	[id]: 2
+	[name]: height
+
+	[id]: 3
+	[name]: steps
+
+	[id]: 4
+	[name]: bloodpressure
+
+==============================================================================
+
+Request #8: readPersonMeasure(1, "bloodpressure", 13)
+Print the bloodpressure measurement (mID: 13) for the person (ID: 1):
+
+=> Result:
+
+	[mid]: 13
+	[value]: 100
+	[valueType]: Int
+	[created]: Fri Nov 18 14:21:58 CET 2016
+
+==============================================================================
+
+Request #9: savePersonMeasure(1, measurement)
+Print the new bloodpressure measurement (72) for the person (ID: 1):
+
+=> Result:
+
+	[measure]: bloodpressure
+	[value]: 72
+	[valueType]: Int
+	[created]: Sun Dec 11 19:17:40 UTC 2016
+
+==============================================================================
+
+Request #10: updatePersonMeasure(1, measurement)
+Update (so, without modifying the creation date) the newly created
+bloodpressure measurement from 72 to 70 for the person (ID: 1):
+
+=> Result:
+
+	[mid]: 39
+	[value]: 70
+	[valueType]: Int
+	[created]: Sun Dec 11 19:17:40 UTC 2016
+
+==============================================================================
+
